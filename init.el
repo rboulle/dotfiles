@@ -35,6 +35,9 @@
   (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
   (add-hook 'elpy-mode-hook 'flycheck-mode))
 
+;; LaTeX/AucTeX 
+
+(setq-default TeX-master nil) ; Query for master file.
 
 ;; BASIC CUSTOMIZATION
 ;; --------------------------------------

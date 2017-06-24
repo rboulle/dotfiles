@@ -39,6 +39,17 @@
 
 (setq-default TeX-master nil) ; Query for master file.
 
+(defun insert-frac ()
+  "We insert  \\dfrac{}{} and position point before the first right brace."
+  (interactive)
+  (progn
+    (insert "\\dfrac{}{}")
+    (backward-char)
+    (backward-char)
+    (backward-char)))
+    
+(global-set-key "\C-cf"   'insert-frac)
+
 ;; BASIC CUSTOMIZATION
 ;; --------------------------------------
 
